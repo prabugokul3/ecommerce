@@ -129,27 +129,20 @@ body {
             <h2>Create Account</h2>
         </div>
 
-        <form class="form" name='contactForm' method='post' action="{{ url('list')}}" enctype="multipart/form-data">
+        <form class="form" name='contactForm' method='post' action="{{ url('list')}}" enctype="multipart/form-data" >
             @csrf
             <div class="form-control">
                 <label for="product">Product:</label>
-                <input list="products" name="product" id="product" value={{old('product')}}>
-                <datalist id="products">
-                    <option value="City">
-                    <option value="Verna">
-                    <option value="Swift">
-                </datalist>
+                <input  name="product" id="product" value={{old('product')}}>
+
                 <span>@error('product'){{$message}}@enderror</span>
+
             </div>
             <div class="form-control">
-                <label for="seller">Seller:</label>
-                <input list="sellers" name="seller" id="seller" value={{old('seller')}}>
-                <datalist id="sellers">
-                    <option value="Honda">
-                    <option value="Hyundai">
-                    <option value="Maruti">
-                </datalist>
-                <span>@error('seller'){{$message}}@enderror</span>
+                <label for="seller">Category:</label>
+                <input  name="category" id="category" value={{old('category')}}>
+
+                <span>@error('category'){{$message}}@enderror</span>
             </div>
             <div class="form-control">
                 <label for="text">Price:</label>
@@ -179,9 +172,9 @@ body {
 
             </div>
             <div class="form-control">
-                <label>Address:</label>
-                <input type="text" placeholder="address" class="address" id="address" name="address" value={{old('address')}}>
-                <span>@error('address'){{$message}}@enderror</span>
+                <label>Description:</label>
+                <input type="text" placeholder="description" class="description" id="description" name="description" value={{old('description')}}>
+                <span>@error('description'){{$message}}@enderror</span>
 
             </div>
             <div class="form-control">

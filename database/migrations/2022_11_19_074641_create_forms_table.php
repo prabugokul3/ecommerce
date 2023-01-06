@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
             $table->string('product');
-            $table->string('seller');
+            $table->string('category');
             $table->string('price');
             $table->string('quantity');
             $table->string('gst');
             $table->string('email');
-            $table->string('address');
+            $table->string('description');
             $table->string('mobilenumber');
             $table->string('filename');
 

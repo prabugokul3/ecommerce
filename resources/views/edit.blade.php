@@ -133,67 +133,45 @@ body {
             @csrf
             <div class="form-control">
                 <label for="product">Product:</label>
-                <input list="products" name="product" id="product"  >
-                <datalist id="products" value="{{$form->product}}">
-                    <option value="City">
-                    <option value="Verna">
-                    <option value="Swift">
-                </datalist>
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="productErr"></span>
+                <input  name="product" id="product" value="{{$form->product}}" >
+
+
             </div>
             <div class="form-control">
                 <label for="seller">Seller:</label>
-                <input list="sellers" name="seller" id="seller"  >
-                <datalist id="sellers" value="{{$form->seller}}">
-                    <option value="Honda">
-                    <option value="Hyundai">
-                    <option value="Maruti">
-                </datalist>
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="sellerErr"></span>
+                <input name="category" id="category" value="{{$form->category}}"  >
+
+
             </div>
             <div class="form-control">
                 <label for="text">Price:</label>
                 <input type="number" name="price" id="price" onchange="gstcal()" value="{{$form->price}}">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="priceErr"></span>
+
             </div>
             <div class="form-control">
                 <label for="text">Quantity:</label>
                 <input type="number" name="quantity" id="quantity" onchange="gstcal()" value="{{$form->quantity}}">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="quantityErr"></span>
+
             </div>
             <div class="form-control">
                 <label for="text">GST:</label>
                 <input type="number" name="gst" id="gst" onchange="gstcal()" value="{{$form->gst}}">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="gstErr"></span>
+
             </div>
-            <div class="form-control">
+            {{-- <div class="form-control">
                 <label for="text">Total:</label>
                 <input type="number" name="tot_price" id="tot_price" value="tot_price" readonly>
-            </div>
+            </div> --}}
 
             <div class="form-control">
                 <label>Email:</label>
                 <input type="text" placeholder="email" id="email" name="email" value="{{$form->email}}">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="emailErr"></span>
+
             </div>
             <div class="form-control">
-                <label>Address:</label>
-                <input type="text" placeholder="address" class="address" id="address" name="address" value="{{$form->address}}">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <span class="error" id="addressErr"></span>
+                <label>Description:</label>
+                <input type="text" placeholder="address" class="description" id="description" name="description" value="{{$form->description}}">
+
             </div>
             <div class="form-control">
                 <label>Mobile number:</label>
